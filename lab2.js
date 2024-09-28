@@ -9,6 +9,9 @@ import { shuffle, getRandomInitialWeightOrBias, saveChartToFile, loadCsv } from 
 function createScatterChart(dataset, feat1, feat2) {
     const chart = new Chart(512, 256);
 
+    chart.fillPlotArea(0xe5ecf6);
+    chart.drawGrid(4, 8, 'white');
+
     const feat1Stats = computeFeatureStats(dataset, feat1);
     const feat2Stats = computeFeatureStats(dataset, feat2);
 
@@ -16,7 +19,7 @@ function createScatterChart(dataset, feat1, feat2) {
         const x = (example[feat1] - feat1Stats.min) / (feat1Stats.max - feat1Stats.min);
         const y = (example[feat2] - feat2Stats.min) / (feat2Stats.max - feat2Stats.min);
 
-        chart.plotSample(x, y, example.Class == 'Cammeo' ? 'blue' : 'red');
+        chart.plotSample(x*0.9+0.05, y*0.9+0.05, example.Class == 'Cammeo' ? 0x636dfa : 0xef563b, 2);
     }
 
     chart.drawAxis();

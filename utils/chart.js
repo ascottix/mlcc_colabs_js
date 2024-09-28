@@ -19,11 +19,11 @@ export default class Chart {
         this.canvas.fill(colorToRgb('white'));
     }
 
-    plotSample(x, y, rgb) {
+    plotSample(x, y, rgb, radius) {
         const cx = Math.floor(x * this.width);
         const cy = Math.floor((1 - y) * this.height);
 
-        this.canvas.circle(this.margin + cx, this.margin + cy, 1, colorToRgb(rgb, 'blue'));
+        this.canvas.circle(this.margin + cx, this.margin + cy, radius || 1, colorToRgb(rgb, 'blue'));
     }
 
     plotLine(x1, y1, x2, y2, rgb, thickness) {
@@ -42,17 +42,21 @@ export default class Chart {
         this.canvas.line(this.margin, ey, this.canvas.width - this.margin, ey, 0);
     }
 
-    drawGrid(cols, rows) {
+    drawGrid(cols, rows, rgb, thickness) {
         const dx = 1 / cols;
         const dy = 1 / rows;
-        const c = 0xcccccc;
+        const c = colorToRgb(rgb, 0xcccccc);
 
         for (let x = 0; x <= 1; x += dx) {
-            this.plotLine(x, 0, x, 1, c, 1);
+            this.plotLine(x, 0, x, 1, c, thickness || 1);
         }
 
         for (let y = 0; y <= 1; y += dy) {
-            this.plotLine(0, y, 1, y, c, 1);
+            this.plotLine(0, y, 1, y, c, thickness || 1);
         }
+    }
+
+    fillPlotArea(rgb) {
+        this.canvas.fill(colorToRgb(rgb), this.margin, this.margin, this.margin+this.width, this.margin+this.height);
     }
 }

@@ -52,7 +52,7 @@ Download the [California housing dataset](https://download.mlcc.google.com/mledu
 
 In [this exercise](https://colab.research.google.com/github/google/eng-edu/blob/main/ml/cc/exercises/numerical_data_bad_values.ipynb?utm_source=mlcc&utm_campaign=colab-external&utm_medium=referral&utm_content=numerical_data_bad_values) you have to find bad data in a dataset.
 
-## Setup
+### Setup
 
 Not required. The dataset `lab4.csv` used in the Colab is fictitious and doesn't have a link, I have copied it into the data folder.
 

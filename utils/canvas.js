@@ -55,6 +55,13 @@ export default class Canvas {
         }
     }
 
+    filledCircle(cx, cy, r, rgb) {
+        for (let y = -r; y <= r; y++) {
+            const x = Math.round(Math.sqrt(r * r - y * y));
+            this.fill(rgb, cx - x, cy + y, cx + x + 1, cy + y + 1);
+        }
+    }
+
     circle(cx, cy, r, rgb) {
         let x = 0, y = r;
         let d = 3 - 2 * r;
