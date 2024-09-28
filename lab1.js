@@ -73,7 +73,7 @@ function runExperiment1(dataset, config) {
         lossCurveChart.plotLine(step * (epoch - 1), stats[epoch - 1] / maxRmse, step * epoch, stats[epoch] / maxRmse);
     }
 
-    lossCurveChart.plotAxis();
+    lossCurveChart.drawAxis();
     saveChartToFile(lossCurveChart, 'lab1_loss_curve.ppm');
 
     // Chart the model plot: FARE over TRIP_MILES and the model curve (a line)
@@ -94,7 +94,7 @@ function runExperiment1(dataset, config) {
     const fare_max = (weight * tripMilesStats.max + bias) / fareRange;
     modelPlotChart.plotLine(0, fare_min, 1, fare_max);
 
-    modelPlotChart.plotAxis();
+    modelPlotChart.drawAxis();
     saveChartToFile(modelPlotChart, 'lab1_model_plot.ppm');
 }
 

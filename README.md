@@ -24,7 +24,7 @@ Only one experiment is run at a time, it must be set in the source code.
 
 ### Setup
 
-Download [the Chicago Taxi simplified dataset](https://dl.google.com/mlcc/mledu-datasets/chicago_taxi_train.csv) and put it into the data folder. The dataset contains 2 days worth of data from the [City of Chicago Taxi Trips dataset](https://www.google.com/url?q=https%3A%2F%2Fdata.cityofchicago.org%2FTransportation%2FTaxi-Trips%2Fwrvz-psew).
+Download the [Chicago Taxi simplified dataset](https://dl.google.com/mlcc/mledu-datasets/chicago_taxi_train.csv) and put it into the data folder. The dataset contains 2 days worth of data from the [City of Chicago Taxi Trips dataset](https://www.google.com/url?q=https%3A%2F%2Fdata.cityofchicago.org%2FTransportation%2FTaxi-Trips%2Fwrvz-psew).
 
 ## Programming exercise #2
 
@@ -32,13 +32,29 @@ In [this exercise](https://colab.research.google.com/github/google/eng-edu/blob/
 
 ### Setup
 
-Download [the Cinar and Koklu 2019 Osmancik and Cammeo rice dataset](https://download.mlcc.google.com/mledu-datasets/Rice_Cammeo_Osmancik.csv) and put it into the data folder. The authors have also published several other datasets in their [repository](https://www.muratkoklu.com/datasets/).
+Download the [Cinar and Koklu 2019 Osmancik and Cammeo rice dataset](https://download.mlcc.google.com/mledu-datasets/Rice_Cammeo_Osmancik.csv) and put it into the data folder. The authors have also published several other datasets in their [repository](https://www.muratkoklu.com/datasets/).
 
 **Citation**
 
 Cinar, I. and Koklu, M., (2019). “Classification of Rice Varieties Using Artificial Intelligence Methods.” International Journal of Intelligent Systems and Applications in Engineering, 7(3), 188-194.
 
 DOI: https://doi.org/10.18201/ijisae.2019355381
+
+## Programming exercise #3
+
+In [this exercise](https://colab.research.google.com/github/google/eng-edu/blob/main/ml/cc/exercises/numerical_data_stats.ipynb?utm_source=mlcc&utm_campaign=colab-external&utm_medium=referral&utm_content=numerical_data_stats) you gather statistics on a dataset and try to find outliers.
+
+### Setup
+
+Download the [California housing dataset](https://download.mlcc.google.com/mledu-datasets/california_housing_train.csv) and put it into the data folder.
+
+## Programming exercise #4
+
+In [this exercise](https://colab.research.google.com/github/google/eng-edu/blob/main/ml/cc/exercises/numerical_data_bad_values.ipynb?utm_source=mlcc&utm_campaign=colab-external&utm_medium=referral&utm_content=numerical_data_bad_values) you have to find bad data in a dataset.
+
+## Setup
+
+Not required. The dataset `lab4.csv` used in the Colab is fictitious and doesn't have a link, I have copied it into the data folder.
 
 ## License
 

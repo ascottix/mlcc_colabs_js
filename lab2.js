@@ -19,7 +19,7 @@ function createScatterChart(dataset, feat1, feat2) {
         chart.plotSample(x, y, example.Class == 'Cammeo' ? 'blue' : 'red');
     }
 
-    chart.plotAxis();
+    chart.drawAxis();
 
     saveChartToFile(chart, `lab2_${feat1}_vs_${feat2}.ppm`);
 }
